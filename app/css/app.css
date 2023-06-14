@@ -447,3 +447,27 @@ table {
     display: block;
   }
 }
+
+.d-t-article {
+  margin-bottom: 2rem;
+}
+
+.article-p {
+  font-family: Kanit Reg;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.article-p-2 {
+  margin-top: 1rem;
+}
+
+@media (min-width: 1100px) {
+  .info-article-page {
+    margin-top: 2rem;
+  }
+  .article-pg-photo {
+    margin-bottom: 3rem;
+  }
+}
