@@ -60,6 +60,21 @@ table {
   gap: 0.3438rem;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+.hamburger-wrap.active .stroke-1 {
+  transform: rotate(45deg) translate(0, 6px);
+}
+.hamburger-wrap.active .stroke-2 {
+  display: none;
+  visibility: hidden;
+}
+.hamburger-wrap.active .stroke-3 {
+  transform: rotate(-45deg) translate(0, -6px);
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .mobile-menu {
@@ -70,6 +85,35 @@ table {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
   border-bottom: 0.1719rem solid #191919;
+}
+
+.burger-btns {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2rem;
+  gap: 1.2rem;
+}
+
+.burger-footer-links {
+  margin-top: 4rem;
+}
+
+.burger-dropdown-wrap {
+  height: calc(100vh - 64px);
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.burger-dropdown-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 64px);
 }
 
 .mobile-menu-wrap {
@@ -121,9 +165,12 @@ table {
 
 .desktop-menu-btns {
   display: flex;
+}
+
+.desktop-menu-btns-style {
   flex-direction: row;
-  gap: 0.625rem;
   align-items: center;
+  gap: 0.625rem;
 }
 
 .desktop-menu-btn-txt {
@@ -382,7 +429,7 @@ table {
   gap: 0.5rem;
 }
 
-.copywright-txt, .footer-links {
+.copywright-txt {
   font-size: 0.8125rem;
   font-family: Kanit Reg;
   color: #BABABA;
@@ -398,6 +445,10 @@ table {
 }
 
 .footer-links {
+  font-size: 0.8125rem;
+  font-family: Kanit Reg;
+  color: #BABABA;
+  line-height: 1.5rem;
   color: #191919;
 }
 
@@ -445,7 +496,19 @@ table {
 @media (min-width: 1100px) {
   .desktop-footer {
     display: block;
+    padding: 0 5rem;
   }
+}
+@media (min-width: 1400px) {
+  .desktop-footer {
+    padding: 0 9rem;
+  }
+}
+
+.mobile-footer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .d-t-article {
@@ -465,9 +528,37 @@ table {
 
 @media (min-width: 1100px) {
   .info-article-page {
-    margin-top: 2rem;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 3rem;
   }
   .article-pg-photo {
     margin-bottom: 3rem;
+    width: 100%;
+  }
+}
+.article-share {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.article-share-img {
+  width: 90%;
+}
+
+.share-txt {
+  margin-bottom: 1rem;
+}
+
+.article-share-wrap {
+  margin-top: 3rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1100px) {
+  .article-share-wrap {
+    display: flex;
   }
 }
