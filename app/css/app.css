@@ -309,6 +309,11 @@ table {
   }
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .enter-btn {
   background-color: #fff;
   margin-top: 1rem;
